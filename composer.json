@@ -1,0 +1,15 @@
+{
+    "name": "anthony/php",
+    "authors": [
+        {
+            "name": "Anthony Merlier",
+            "email": "webmaster@consor.fr"
+        }
+    ],
+    "require": {
+        "symfony/var-dumper": "^5.2"
+    },
+    "require-dev": {
+        "mmucklo/krumo": "^0.6.1"
+    }
+}
