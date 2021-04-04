@@ -10,6 +10,10 @@
     <h1>Moyennes de la classe de 4ème D</h1>
 <?php
 
+
+require('./vendor/autoload.php');
+
+
 $notesEleves = [
     "Alvin"     => 13,
     "Diego"     => 6.5,
@@ -26,6 +30,10 @@ CONSIGNES
 -> Alain : 12.5
 -> Virginie : 14
 -> Louison : 11
+*/
+
+
+/*
 
 2. Afficher via une boucle "for" puis une boucle "foreach" la moyenne de chacun des élèves de la classe
 

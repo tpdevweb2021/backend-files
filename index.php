@@ -1,6 +1,9 @@
 <?php
 
+
 require('./vendor/autoload.php');
+
+
 
 // // IL FAUT CREER 4 VEHICULES AVEC DES PROPRIETES DEFINIES :
 // // - MARQUE (string)
@@ -144,7 +147,7 @@ require('./vendor/autoload.php');
 //     "10400" => ["departement" => "Aube"],
 //     "10500" => ["departement" => "Aube"]
 // ];
-// krumo($depts, KRUMO_NO_SORT);
+// var_dump($depts);
 
 
 // Ecrivez une boucle en PHP avec la méthode la plus adaptée allant du chiffre 23 au chiffre 87, et mentionnez la phrase « nouvelle dizaine » après chaque dizaine (30, 40, 50 …) affichée.
@@ -176,10 +179,21 @@ require('./vendor/autoload.php');
 
 
 
-function applyCoeff(float $acNombre, float $acCoeff):mixed
-{
-    return $acNombre * $acCoeff;
-}
+// function applyCoeff(float $acNombre, float $acCoeff):int|float
+// {
+//     return $acNombre * $acCoeff;
+// }
 
-echo applyCoeff(56, 1.5);
+// echo applyCoeff(56, 1.5);
+
+// function addInfinite(...$values){
+//     $sum = 0;
+//     foreach($values as $value){
+//         if(is_int($value)) $sum += $value;
+//     };
+//     return $sum;
+// }
+
+// echo addInfinite(1, "de", 2, 4, "il", 4, 3, 6, "E");
+
 

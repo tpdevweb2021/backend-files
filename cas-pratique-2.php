@@ -11,6 +11,8 @@
 
 <?php
 
+use Symfony\Component\VarDumper\VarDumper;
+
 $produits = [
     [
         "model"     => "32LC456",
@@ -123,6 +125,10 @@ CONSIGNES
 -> Produit 2 : model => "60LH6700", brand => "LG", size => 60, frequency => 1100, contrast => 1300000, smart => false, price => 999.99, stock => 6
 
 3. CREER UNE FONCTION QUI NOUS DONNERA LA POSSIBILITE DE SUPPRIMER UN ELEMENT DU TABLEAU GRACE A SA REFERENCE
+*/
+
+
+/*
 
 4. CREER UNE FONCTION NOUS PERMETTANT D'AFFICHER TOUS LES PRODUITS FAISANT PLUS DE 34 POUCES
 
@@ -155,16 +161,18 @@ CONSIGNES
                     </tr>
                 </thead>
                 <tbody>
+                    <?php foreach($produits as $produit): ?>
                     <tr>
-                        <td>#REF</td>
-                        <td>#MARQUE</td>
-                        <td>#TAILLE</td>
-                        <td>#FREQUENCE</td>
-                        <td>#CONTRASTE</td>
-                        <td>#SMART</td>
-                        <td>#PRIX</td>
-                        <td>#STOCK</td>
+                        <td><?= $produit['model'] ?></td>
+                        <td><?= $produit['brand'] ?></td>
+                        <td><?= $produit['size'] ?>"</td>
+                        <td><?= $produit['frequency'] ?>Hz</td>
+                        <td><?= $produit['contrast'] ?>/1</td>
+                        <td><?= ($produit['smart'] === true) ? "Oui" : "Non" ?></td>
+                        <td><?= $produit['price'] ?>€</td>
+                        <td><?= $produit['stock'] ?> <?= $produit['stock'] > 1 ? "pcs" : "pc" ?></td>
                     </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
