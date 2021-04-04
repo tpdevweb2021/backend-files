@@ -23,6 +23,10 @@ $notesEleves = [
     "Louis"     => 8.5
 ];
 
+echo $notesEleves["Hatem"];
+$keys = array_keys($notesEleves);
+echo $keys[4];
+
 /* 
 CONSIGNES 
 
@@ -35,10 +39,37 @@ CONSIGNES
 
 /*
 
+// var_dump($notesEleves);
+
+/*
 2. Afficher via une boucle "for" puis une boucle "foreach" la moyenne de chacun des élèves de la classe
+*/
 
+// foreach($notesEleves as $prenomEleve => $notesEleve){
+//     echo "Voici la moyenne de $prenomEleve : $notesEleve<br>";
+// }
+
+
+$keys = array_keys($notesEleves);
+var_dump($keys);
+var_dump($notesEleves);
+
+for($i = 0; $i < count($notesEleves); $i++){
+    $prenom = $keys[$i];
+    echo "Voici la moyenne de {$prenom} qui a la note de {$notesEleves[$prenom]}<br>";
+}
+
+
+/*
 3. Calculez la moyenne de la classe en utilisant "impérativement une fonction" avec pour seul paramètre le tableau $notesEleves
+*/
 
+function moyenneClasse(array &$array){
+    $moyenne = array_sum($array) / count($array);
+    echo "Voici la moyenne générale : " . round($moyenne, 2);
+}
+moyenneClasse($notesEleves);
+/*
 4. Retirez Alvin du tableau de notes
 
 5. Ré-effectuez et affichez la nouvelle moyenne de classe en dessous de la moyenne précédente.

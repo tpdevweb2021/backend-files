@@ -1,5 +1,6 @@
 <?php
 
+use Symfony\Component\VarDumper\VarDumper;
 
 require('./vendor/autoload.php');
 
@@ -179,21 +180,127 @@ require('./vendor/autoload.php');
 
 
 
-// function applyCoeff(float $acNombre, float $acCoeff):int|float
+// DECLARATION
+// function displayNote(array $array, int|string $key):mixed
 // {
-//     return $acNombre * $acCoeff;
+//     return $array[$key];
 // }
 
-// echo applyCoeff(56, 1.5);
 
-// function addInfinite(...$values){
-//     $sum = 0;
-//     foreach($values as $value){
-//         if(is_int($value)) $sum += $value;
-//     };
-//     return $sum;
+// $notes = [ 12, 17, 14 ];
+// $numeroDeNote = 1;
+// var_dump($notes);
+
+// //EXECUTION
+// echo(displayNote($notes, $numeroDeNote));
+
+// FUNCTION returnTrue -> output -> true
+// function returnTrue():bool
+// {
+//     return true;
 // }
 
-// echo addInfinite(1, "de", 2, 4, "il", 4, 3, 6, "E");
+// Faire une fonction qui prend en paramètre une chaine de caractères et qui retourne cette même chaine.
+// function bonjour(int $old, string $lastName = null, string $firstName = null):string{
+    
+//     if( $lastName == null OR $firstName == null){
+//         return "Bonjour mon ami, tu as $old ans";
+//     }else{
+//         return "Bonjour $lastName $firstName, tu as $old ans";
+//     }
 
+// }
+
+// $prenom = "John";
+// $nom = "Doe";
+// $age = 52;
+
+// echo bonjour($age);
+
+// Faire une fonction qui prend deux paramètres : age et genre. Le paramètre genre peut prendre comme valeur :
+// Homme
+// Femme
+
+// La fonction doit renvoyer en fonction des paramètres :
+// Vous êtes un homme et vous êtes majeur
+// Vous êtes un homme et vous êtes mineur
+// Vous êtes une femme et vous êtes majeure
+// Vous êtes une femme et vous êtes mineure
+// Gérer tous les cas.
+
+// function personIs(int $old, string $genre):string
+// {
+
+//     $conj = ($genre === "femme") ? "e" : "";
+
+//     if($old >= 18 ){
+//         // code 
+//         return "Vous êtes un$conj $genre et vous êtes majeur$conj";
+//     }
+//     elseif($old < 18 ){
+//         //code
+//         return "Vous êtes un$conj $genre et vous êtes mineur$conj";
+//     }
+//     else{
+//         return "Erreur";
+//         die;
+//     }
+// }
+
+// $person1Age = 16; 
+// $person1Genre = "homme"; 
+
+// echo personIs($person1Age, $person1Genre);
+
+
+/* Faire une fonction qui prend en paramètre trois nombres et qui renvoit la somme de ces nombres. Tous les paramètres doivent avoir une valeur par défaut.
+*/
+
+// function somme(float $nombre1 = 14.52, float $nombre2 = 17.52, float $nombre3 = 16.21):float {
+//     return $nombre1 + $nombre2 + $nombre3;
+// }
+
+// echo somme();
+
+/*
+Faire une fonction qui prend en paramètre deux nombres. La fonction doit retourner :
+
+"Le premier nombre est plus grand" si le premier nombre est plus grand que le deuxième
+"Le premier nombre est plus petit" si le premier nombre est plus petit que le deuxième
+"Les deux nombres sont identiques" si les deux nombres sont égaux
+*/
+
+
+// echo 1 <=> 1; // 0
+// echo 1 <=> 2; // -1
+// echo 2 <=> 1; // 1
+
+
+//     12           <=>             12
+
+// //   1            0              -1
+
+
+// function supOrInf(float $nb1, float $nb2):string {
+//     switch($nb1 <=> $nb2){
+//         case -1 : 
+//             return "Le premier chiffre est plus petit"; // break
+//         case 1 : 
+//             return "Le premier chiffre est le plus grand";// break
+//         case 0 : 
+//             return "Les chiffres sont égaux";// break
+//     }
+// }
+
+// echo supOrInf(10, 20);
+
+// function boucle(int $depart, int $fin)
+// {
+//     // ON CREE NOTRE BOUCLE
+//     for($i = $depart ; $i <= $fin; $i++){
+//         echo "Ceci est la ligne $i<br>"; 
+//     }
+// }
+
+// boucle(12,27);
 
