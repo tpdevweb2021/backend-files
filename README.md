@@ -2,6 +2,7 @@
 
 ## Pour initialiser ce repository, 2 solutions :
 A. Download le fichier Zip et le décompresser où vous le souhaitez
+
 B. Clone ce repository dans le répertoire de votre choix
 
 ## Après avoir récupérer le projet
