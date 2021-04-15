@@ -11,7 +11,6 @@
 
 <?php
 
-use Symfony\Component\VarDumper\VarDumper;
 
 $produits = [
     [
