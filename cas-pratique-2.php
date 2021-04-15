@@ -161,18 +161,16 @@ CONSIGNES
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($produits as $produit): ?>
                     <tr>
-                        <td><?= $produit['model'] ?></td>
-                        <td><?= $produit['brand'] ?></td>
-                        <td><?= $produit['size'] ?>"</td>
-                        <td><?= $produit['frequency'] ?>Hz</td>
-                        <td><?= $produit['contrast'] ?>/1</td>
-                        <td><?= ($produit['smart'] === true) ? "Oui" : "Non" ?></td>
-                        <td><?= $produit['price'] ?>€</td>
-                        <td><?= $produit['stock'] ?> <?= $produit['stock'] > 1 ? "pcs" : "pc" ?></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
-                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
